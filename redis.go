@@ -491,6 +491,6 @@ func split255(s string) []string {
 const (
 	defaultTtl = 360
 	hostmaster = "hostmaster"
-	zoneUpdateTime = 10*time.Minute
+	zoneUpdateTime = 2*time.Minute
 	transferLength = 1000
 )
