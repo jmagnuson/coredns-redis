@@ -8,6 +8,7 @@ import (
 
 	"github.com/miekg/dns"
 
+	"github.com/coredns/coredns/plugin/pkg/log"
 	"github.com/coredns/coredns/plugin"
 
 	redisCon "github.com/gomodule/redigo/redis"
@@ -59,7 +60,7 @@ func (redis *Redis) LoadZones() {
 		zones []string
 	)
 
-	fmt.Println("loading zones")
+	log.Debug("loading zones")
 
 	conn := redis.Pool.Get()
 	if conn == nil {
